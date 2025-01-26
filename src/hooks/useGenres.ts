@@ -1,5 +1,6 @@
+import errorMap from "zod/lib/locales/en";
 import useData from "./useData";
-
+import genres from "../data/genres";
 export interface Genre{
     id:number;
     name:string;
@@ -11,5 +12,5 @@ interface FetchGenresResponse{
     results:Genre[];
 }
 
-const useGenres=()=>useData<Genre>('/genres');
+const useGenres=()=>({data:genres, isLoading:false, error:null})
 export default useGenres;

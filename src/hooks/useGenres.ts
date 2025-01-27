@@ -1,5 +1,3 @@
-import errorMap from "zod/lib/locales/en";
-import useData from "./useData";
 import genres from "../data/genres";
 export interface Genre{
     id:number;
